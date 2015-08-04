@@ -79,19 +79,37 @@
 	</style>
 
 	<script type="text/javascript">
+
+		//VARIABLE FLAG COMIENZA EN FALSE.
 		var flag=false;
+
+		//FUNCION QUE SE EJECUTARÁ AL MOMENTO DE HACER CLICK EN EL MENU.
 		function mostrar_nav () {
 			
+			//SI LA VARIABLE FLAG ES TRUE SE EJECUTA LO QUE ESTA DENTRO DEL IF (POR DEFECTO PARTE EN FALSE LA PRIMERA VEZ.)
 			if (flag) {
+
+				//SE GUARDA EN LA VARIABLE D EL ELEMENTO CON EL ID "NAV1"
 				var d = document.getElementById("nav1");
+
+				//SE OBTIENE LA CLASE DEL ELEMENTO D Y SE MODIFICA POR "NAV-MOBILE-LEFT"
 				d.className = "nav-mobile-left";
+
+				//SE CAMBIA LA VARIABLE FLAG A FALSE Y SE TERMINA DE EJECUTAR EL CÓDIGO.
 				flag=false;
 
 			}
 			
+			//SI LA VARIABLE FLAG ES FALSE SE EJECUTA LO QUE ESTA DENTRO DEL ELSE.
 			else{
+
+				//SE GUARDA EN LA VARIABLE D EL ELEMENTO CON EL ID "NAV1"
 				var d = document.getElementById("nav1");
+
+				//SE OBTIENE LA CLASE DEL ELEMENTO D Y SE MODIFICA POR "NAV-MOBILE-LEFT-ACTIVE"
 				d.className = "nav-mobile-left-active";
+
+				//SE CAMBIA LA VARIABLE FLAG A TRUE Y SE TERMINA DE EJECUTAR EL CÓDIGO.
 				flag=true;
 			}
 		}
@@ -109,6 +127,7 @@
 		<a href="">hola</a>
 	</div>
 
+	<!-- SE AGREGA EL METODO ONCLICK Y SE LE INDICA QUE AL HACER CLICK SE EJECUTE EL METODO mostrar_nav() que creamos en el javascript -->
 	<div onClick="mostrar_nav()" class="nav-mobile">
 		menu
 	</div>
